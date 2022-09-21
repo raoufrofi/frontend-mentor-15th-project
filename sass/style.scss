@@ -1,0 +1,23 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout";
+@use "main-header";
+@use "buttons";
+@use "main";
+@use "footer";
+
+// @use "main-header";
+// @use "snippets";
+// @use "workflow";
+// @use "footer";
+// @use "brands";
+
+body {
+  font-family: g.$open-sans;
+  width: 100%;
+  min-height: 100vh;
+
+  // @include u.breakpoint(tab) {
+  //   background-image: url("../images/bg-header-desktop.png");
+  // }
+}

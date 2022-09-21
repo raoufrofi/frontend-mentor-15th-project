@@ -1,0 +1,26 @@
+@use "globals" as g;
+@use "util" as u;
+
+.header__nav--btn {
+  font-weight: bold;
+  padding: u.em(10) u.em(40);
+  border-radius: 50px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgb(197, 197, 197);
+}
+
+.header__btn {
+  font-weight: bold;
+  padding: u.em(16) u.em(48);
+  width: min(300px, 90%);
+  background-color: g.$pink;
+  box-shadow: 1px 1px 4px #fff;
+  border-radius: 50px;
+  color: #fff;
+  margin-inline: auto;
+  text-align: center;
+
+  @include u.breakpoint(tab) {
+    margin-inline: unset;
+  }
+}

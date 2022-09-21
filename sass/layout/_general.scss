@@ -1,0 +1,35 @@
+@use "../globals/" as g;
+@use "../util/" as u;
+
+.f-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: u.em(16);
+}
+.gap-2 {
+  gap: u.em(32);
+}
+.gap-3 {
+  gap: u.em(48);
+}
+.gap-4 {
+  gap: u.em(64);
+}

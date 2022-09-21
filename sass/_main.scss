@@ -1,0 +1,42 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+main {
+  width: min(380px, 90%);
+  padding: u.em(10);
+  margin-inline: auto;
+  margin-bottom: u.em(200);
+  // padding-bottom: u.em(100);
+  // gap: u.em(130);
+
+  @include u.breakpoint(tab) {
+    width: min(1280px, 80%);
+    margin-inline: auto;
+  }
+}
+
+.main__content {
+  display: grid;
+  gap: u.em(30);
+
+  .card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+    padding: u.em(32);
+    display: grid;
+    align-items: center;
+    gap: u.em(30);
+
+    @include u.breakpoint(tab) {
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+  }
+  .card__2 {
+    @include u.breakpoint(tab) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}

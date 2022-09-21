@@ -1,0 +1,47 @@
+@use "globals" as g;
+@use "util" as u;
+@use "layout" as l;
+
+.header {
+  padding: u.em(30);
+  gap: u.em(120);
+  width: 100%;
+  background: {
+    image: url("../images/bg-hero-mobile.svg");
+    size: cover;
+    position: center;
+    color: g.$Very-Pale-Cyan;
+  }
+
+  @include u.breakpoint(tab) {
+    width: min(1880px, 100%);
+    margin-inline: auto;
+    background-image: url("/images/bg-hero-desktop.svg");
+  }
+
+  &__nav {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    figure {
+      width: calc(120px + 2vw);
+    }
+  }
+
+  &__article {
+    article {
+      justify-content: center;
+      align-items: center;
+
+      p {
+        font-size: calc(14px + 0.5vw);
+      }
+    }
+
+    @include u.breakpoint(tab) {
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+  }
+}
